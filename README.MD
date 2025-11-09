@@ -103,6 +103,16 @@ Open your web browser and navigate to `http://localhost` to see the application 
     docker rename <old_container_name> <new_container_name>     
     ```     
 
+### Docker push and Pull
+- To push an image to Docker Hub
+    ```bash
+    docker push <username>/mynewimage:latest     
+    ```
+- To pull an image from Docker Hub
+    ```bash
+    docker pull <username>/mynewimage:latest     
+    ``` 
+
 ### Removing Docker Containers
 - To remove a specific container
     ```bash
