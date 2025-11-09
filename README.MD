@@ -57,10 +57,7 @@ Open your web browser and navigate to `http://localhost` to see the application 
     ```bash
     docker images   
     ```
-- To remove a specific image
-    ```bash
-    docker rmi <image_id or image_name>     
-    ```
+    
 - To attach to a running container
     ```bash
     docker attach <container_id or container_name>     
@@ -74,7 +71,29 @@ Open your web browser and navigate to `http://localhost` to see the application 
     docker stats     
     ```
 
+### Removing Docker Containers
+- To remove a specific container
+    ```bash
+    docker rm <container_id or container_name>     
+    ```     
+- To run and then remove once the container stop in one command
+    ```bash
+    docker run --rm -p 80:80 mynodeapp
+    ```    
+
+### Removing Docker Images
+- To remove a specific image
+    ```bash
+    docker rmi <image_id or image_name>     
+    ```
+
+
 ### Cleaning Up Docker Resources
+-To Remove all Unused images
+    ```bash
+    docker image prune
+    ```
+
 - To Remove all Stopped Containers
     ```bash
     docker container prune
