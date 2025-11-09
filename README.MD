@@ -73,10 +73,6 @@ Open your web browser and navigate to `http://localhost` to see the application 
     ```bash
     docker stats     
     ```
-            
-
-
-
 
 ### Cleaning Up Docker Resources
 - To Remove all Stopped Containers
