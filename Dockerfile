@@ -11,11 +11,11 @@ RUN npm install
 
 COPY . /app
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["node","server.js"]
 
-
-
+# To build and run the Docker image, use the following commands:
 # docker build -t mynodeapp .
 # docker run -p 80:80 mynodeapp
+
