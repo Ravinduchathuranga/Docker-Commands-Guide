@@ -89,6 +89,20 @@ Open your web browser and navigate to `http://localhost` to see the application 
     docker cp <container_id or container_name>:<path_in_container> <path_on_host>     
     ```
 
+### Naming and Tagging Docker Images
+- To tag an image with a new name
+    ```bash
+    docker tag <image_id> mynewimage:latest     
+    ```
+- To name a container when running
+    ```bash
+    docker run --name mycontainer -d -p 3001:3000 mynodeapp
+    ```    
+- To rename a container
+    ```bash
+    docker rename <old_container_name> <new_container_name>     
+    ```     
+
 ### Removing Docker Containers
 - To remove a specific container
     ```bash
