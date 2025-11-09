@@ -30,7 +30,7 @@ Open your web browser and navigate to `http://localhost` to see the application 
 ### Building and Running Docker Containers
 - Build the Docker image:
     ```bash
-    docker build -t mynodeapp .
+    docker build -t mynodeapp:latest .
     ```
 - Run the Docker container:
     ```bash
