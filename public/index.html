@@ -14,24 +14,54 @@
     h1 {
       color: #333;
     }
-    a {
-      display: inline-block;
+    input {
+      padding: 10px;
+      width: 200px;
       margin-top: 20px;
-      text-decoration: none;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 15px;
+      margin-left: 10px;
       background-color: #007bff;
       color: white;
-      padding: 10px 15px;
+      border: none;
       border-radius: 5px;
+      cursor: pointer;
     }
-    a:hover {
+    button:hover {
       background-color: #0056b3;
+    }
+    p#output {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #444;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Node.js Webpage!!!</h1>
+  <h1>Welcome to My Node.js Webpage!</h1>
   <p>This page is served using Express.js 🚀</p>
-  <a href="/hello">Say Hello</a>
+
+  <input type="text" id="userInput" placeholder="Type something..." />
+  <button onclick="showText()">Show Text</button>
+
+  <p id="output"></p>
+
+  <script>
+    function showText() {
+      const input = document.getElementById('userInput').value;
+      const output = document.getElementById('output');
+      
+      if (input.trim() === '') {
+        output.textContent = 'Please enter something!';
+        output.style.color = 'red';
+      } else {
+        output.textContent = 'You typed: ' + input;
+        output.style.color = '#333';
+        console.log('User input:', input);
+      }
+    }
+  </script>
 </body>
 </html>
-
