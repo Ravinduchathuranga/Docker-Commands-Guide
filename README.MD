@@ -57,7 +57,7 @@ Open your web browser and navigate to `http://localhost` to see the application 
     ```bash
     docker images   
     ```
-    
+
 - To attach to a running container
     ```bash
     docker attach <container_id or container_name>     
@@ -89,7 +89,8 @@ Open your web browser and navigate to `http://localhost` to see the application 
 
 
 ### Cleaning Up Docker Resources
--To Remove all Unused images
+
+- To Remove all Unused images
     ```bash
     docker image prune
     ```
