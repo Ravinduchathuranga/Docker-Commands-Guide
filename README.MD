@@ -26,7 +26,8 @@ Open your web browser and navigate to `http://localhost` to see the application 
 - The Dockerfile uses a layered architecture to optimize build times by caching the installation of dependencies.
 - Make sure to modify the `package.json` file if you want to add more dependencies to the application.
 
-### Docker Commands Summary
+## Docker Commands Summary
+### Building and Running Docker Containers
 - Build the Docker image:
     ```bash
     docker build -t mynodeapp .
@@ -45,6 +46,8 @@ Open your web browser and navigate to `http://localhost` to see the application 
     ```bash
     docker stop <container_id or container_name>    
     ```
+
+### Viewing Docker Containers and Images
 - To view running containers
     ```bash
     docker ps
@@ -57,11 +60,12 @@ Open your web browser and navigate to `http://localhost` to see the application 
     ```bash
     docker images   
     ```
-
 - To attach to a running container
     ```bash
     docker attach <container_id or container_name>     
     ```
+
+### Viewing Container Information
 - To view logs of a container
     ```bash
     docker logs <container_id or container_name>     
@@ -69,6 +73,20 @@ Open your web browser and navigate to `http://localhost` to see the application 
 - To view resource usage of containers
     ```bash
     docker stats     
+    ```
+- To inspect a image or low level object 
+    ```bash
+    docker inspect <container_id or container_name>     
+    ```
+
+### Copying Files Between Host and Container
+- To copy files from host to container
+    ```bash
+    docker cp <path_on_host> <container_id or container_name>:<path_in_container>     
+    ```
+- To copy files from container to host
+    ```bash
+    docker cp <container_id or container_name>:<path_in_container> <path_on_host>     
     ```
 
 ### Removing Docker Containers
@@ -87,24 +105,19 @@ Open your web browser and navigate to `http://localhost` to see the application 
     docker rmi <image_id or image_name>     
     ```
 
-
 ### Cleaning Up Docker Resources
-
 - To Remove all Unused images
     ```bash
     docker image prune
     ```
-
 - To Remove all Stopped Containers
     ```bash
     docker container prune
     ```
-
 - To Remove all Images in one command
     ```bash
     docker system prune -a
     ```
-
 - To remove all stopped containers
     ```bash
     docker system prune --volumes
